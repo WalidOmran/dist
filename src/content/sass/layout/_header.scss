@@ -1,0 +1,82 @@
+.main-header {
+    position: relative;
+    z-index: 999;
+    padding: 20px 0;
+    font-family: "Montserrat", sans-serif;
+    .navbar {
+        .navbar__logo {
+            color: #fff;
+            padding: 5px;
+            border-#{$start}: 4px solid $greanColor;
+            font-size: 34px;
+            font-weight: 900;
+        }
+        .navbar__list {
+            transition: #{$start} .3s;
+            @media (max-width:1000px) {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                #{$start}: -100%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                padding-top: 20px;
+            }
+            .navbar__item {
+                @media (max-width:1000px) {
+                    padding: 8px;
+                }
+                .navbar__link {
+                    padding-#{$start}: 18px;
+                    padding-#{$end}: 8px;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: 900;
+                    transition: color .3s;
+                    &.active , &:hover {
+                      color: $greanColor;
+                    }
+                 
+                }
+            }
+        }
+        .navbar__toggel {
+            @media (min-width:1000.1px) {
+                display: none;
+            }
+            width: 45px;
+            height: 45px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            span {
+                display: block;
+                width: 90%;
+                height: 5px;
+                background-color: #fff;
+                margin: 6px auto;
+                transition: transform .3s;
+            }
+            &.open {
+                span {
+                    //transition: transform .3s;
+                    &:first-of-type {
+                        transform: rotateZ(45deg);
+                        position: relative;
+                        top: 10px;
+                    }
+                    &:nth-of-type(2) {
+                        display: none;
+                    }
+                    &:last-of-type {
+                        transform: rotateZ(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    .nav-show {
+        #{$start}: 0 !important;
+    }
+}

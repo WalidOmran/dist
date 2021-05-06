@@ -1,0 +1,35 @@
+/*
+ ** Overlay 
+*/
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    #{$start}: 0;
+    width: 50%;
+    height: 50%;
+}
+/*
+ ** Prefixes Mixin 
+ ** Auto add prefixes to properites 
+*/
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefixe in $prefixes {
+        #{'-' + $prefixe + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+/*
+ ** Animation Mixin 
+ ** Auto add animation to properites 
+*/
+@mixin keyFrame($animName) {
+    @-webkit-keyframes #{$animName} {
+        @content;
+    }
+    @-moz-keyframes #{$animName} {
+        @content;
+    }
+    @keyframes #{$animName} {
+        @content;
+    }
+}

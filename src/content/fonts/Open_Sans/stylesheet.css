@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Damion';
+    src: url('Damion.eot');
+    src: url('Damion.eot?#iefix') format('embedded-opentype'),
+        url('Damion.woff2') format('woff2'),
+        url('Damion.woff') format('woff'),
+        url('Damion.ttf') format('truetype'),
+        url('Damion.svg#Damion') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.eot');
+    src: url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Regular.woff2') format('woff2'),
+        url('OpenSans-Regular.woff') format('woff'),
+        url('OpenSans-Regular.ttf') format('truetype'),
+        url('OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
